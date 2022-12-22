@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Array.tpp.cpp                                      :+:      :+:    :+:   */
+/*   Array.tpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlouro <nlouro@student.42heilbronn.de      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -28,10 +28,11 @@ Array<T>::Array( unsigned int n ) : _size( n ), _array( new T[n] )
 }
 
 template <typename T>
-Array<T>::Array( Array<T> const &src)
+Array<T>::Array( Array<T> const &src) : _size( src.size() )
 {
 	if ( VERBOSE )
 		std::cout << "Copy called" << std::endl;
+	_array = NULL;
 	*this = src;
 }
 
