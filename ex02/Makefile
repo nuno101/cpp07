@@ -1,11 +1,11 @@
 NAME = array
 VERBOSE = 1
 
-#CPP_FLAGS = -Wextra -Werror -Wall --std=c++98 -fsanitize=address
-CPP_FLAGS = -Wextra -Werror -Wall --std=c++98
+CPP_FLAGS = -Wextra -Werror -Wall --std=c++98 -fsanitize=address
+#CPP_FLAGS = -Wextra -Werror -Wall --std=c++98
 
-CPP_FILES = main.cpp Array.cpp
-HPP_FILES = Array.hpp 
+CPP_FILES = main.cpp
+HPP_FILES = Array.hpp
 
 O_FILES = $(CPP_FILES:%cpp=%o)
 

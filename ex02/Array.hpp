@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 18:33:16 by nlouro            #+#    #+#             */
-/*   Updated: 2022/12/22 18:46:19 by nlouro           ###   ########.fr       */
+/*   Updated: 2022/12/22 19:20:47 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,17 @@ class	Array
 {
 	private:
 		size_t	_size;
-		T		*array;
+		T		*_array;
 	public:
 		Array<T>();
 		Array<T>( unsigned int n );
 		Array<T>( const Array<T> &src );
 		Array<T> &operator=( const Array<T> &src );
 		~Array<T>();
-		T &operator[](size_t index)
+		T &operator[](size_t index);
 		size_t	size() const;
-}
+};
+
+#include "Array.tpp"
 
 #endif
