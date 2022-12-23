@@ -14,7 +14,7 @@
 #define ARRAY_TPP
 
 template <typename T>
-Array<T>::Array() : _array( nullptr ), _size( 0 )
+Array<T>::Array() : _size ( 0 ), _array( nullptr )
 {
 	if ( VERBOSE )
 		std::cout << "Constructor called" << std::endl;
@@ -40,7 +40,7 @@ template <typename T>
 Array<T> &Array<T>::operator=( Array<T> const &src)
 {
 	if ( VERBOSE )
-		std::cout << "Copy called" << std::endl;
+		std::cout << "Assign called" << std::endl;
 	if ( _size > 0 )
 		delete[] _array;
 	_size = src._size;
